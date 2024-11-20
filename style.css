@@ -1,0 +1,430 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  .skills-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa; /* Light background */
+  }
+  
+  .skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skill {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .skill i {
+    font-size: 3rem;
+    color: #0073b1; /* Default LinkedIn blue for consistency */
+  }
+  
+  .skill p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8); /* Transparent white */
+    padding: 10px 20px;
+    border-radius: 30px; /* Curved edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Spacing between links */
+  }
+  
+  .navbar li {
+    margin: 0;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333; /* Dark gray text */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #0073b1; /* Highlight on hover */
+    color: #fff; /* White text */
+    border-radius: 15px; /* Small rounded corners on hover */
+  }
+  
+  
+  .hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Full viewport height */
+    background: url('photos/elevated-view-laptop-earphones-crumpled-papers-pencil-blank-spiral-notepad-frame-black-background_23-2148080331.avif') no-repeat center center/cover;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to reduce brightness */
+    z-index: -1;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    z-index: 2; /* Ensure text stays above the overlay */
+  }
+  
+  .hero-section .subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    z-index: 2;
+  }
+  
+  
+  section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+  }
+  
+  /* Base styles for buttons */
+.buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons .btn i {
+  margin-right: 8px;
+}
+
+.buttons .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Button colors */
+.buttons .btn:nth-child(1) {
+  background-color: #0073b1; /* LinkedIn blue */
+}
+
+.buttons .btn:nth-child(1):hover {
+  background-color: #005582;
+}
+
+.buttons .btn:nth-child(2) {
+  background-color: #333; /* GitHub black */
+}
+
+.buttons .btn:nth-child(2):hover {
+  background-color: #000;
+}
+
+.buttons .btn:nth-child(3) {
+  background-color: #4caf50; /* Green for download */
+}
+
+.buttons .btn:nth-child(3):hover {
+  background-color: #388e3c;
+}
+  
+  .projects-section .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center;
+  }
+  
+  .project-card {
+    width: 300px; /* Fixed width for consistency */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 200px; /* Uniform height for images */
+    object-fit: cover;
+  }
+  
+  .project-card p {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #218838;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0073b1; /* LinkedIn blue color */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .btn:hover {
+    background-color: #005582; /* Darker LinkedIn blue on hover */
+  }
+  
+  .btn:nth-child(2) {
+    background-color: #333; /* GitHub black */
+  }
+  
+  .btn:nth-child(2):hover {
+    background-color: #000;
+  }
+  
+  .btn:nth-child(3) {
+    background-color: #4caf50; /* Green for download */
+  }
+  
+  .btn:nth-child(3):hover {
+    background-color: #388e3c;
+  }
+
+  .contact-section {
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-section button.contact-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0073b1; /* Default LinkedIn blue for consistency */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-section button.contact-btn:hover {
+    background-color: #005582; /* Darker blue on hover */
+  }
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .navbar ul {
+        
+        gap: 10px;
+    }
+
+    .buttons .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        gap: 4px;
+      }
+    
+      .buttons .btn i {
+        margin-right: 6px;
+      }
+    
+
+    .project-card img {
+        max-height: 200px;
+    }
+    .contact-section input,
+  .contact-section textarea {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+    
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1rem;
+    }
+
+    .buttons .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        gap: 3px;
+      }
+    
+      .buttons .btn i {
+        margin-right: 4px;
+      }
+
+    .navbar a {
+        font-size: 0.8rem;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      width: 94%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+}
